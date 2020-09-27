@@ -6,7 +6,7 @@ wget  http://mirrors.aliyun.com/repo/Centos-7.repo && mv Centos-7.repo CentOS-Ba
 yum clean all && yum makecache && yum update -y
 
 # 安装常用工具
-yum install -y vim ntpdate bash-completion net-tools git yum-versionlock nmap nfs-utils telnet
+yum install -y vim ntpdate bash-completion net-tools git yum-versionlock nmap nfs-utils telnet unzip
 
 # 关闭防火墙
 systemctl stop firewalld && systemctl disable firewalld
@@ -49,7 +49,7 @@ EOF
 sed -i "s@#Port 22@Port 1798@g" /etc/ssh/sshd_config
 
 # 添加描述
-cat <<'EOF'> /var/spool/cron/root
+cat <<'EOF'> /etc/motd
 
 
  ___  ____     ____     ______        ______   ________  _________     _

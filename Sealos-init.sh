@@ -17,6 +17,8 @@ rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install -y kernel-ml
 # 查看可升级内核命令
 # yum --disablerepo="*" --enablerepo="elrepo-kernel" list available
+# 查看系统有哪些内核
+# awk -F\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg
 
 # 创建定时任务
 cat <<'EOF'> /var/spool/cron/root

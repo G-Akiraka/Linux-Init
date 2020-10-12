@@ -11,9 +11,13 @@ yum install -y vim ntpdate bash-completion net-tools git yum-versionlock nmap nf
 # 关闭防火墙
 systemctl stop firewalld && systemctl disable firewalld
 
-# 升级内核
+# 升级内核 kernel-lt:长期支持版本 kernel-ml:稳定主线版本
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install -y kernel-lt
+yum --enablerepo=elrepo-kernel install kernel-ml
+# 查看可升级内核命令
+# yum --disablerepo="*" --enablerepo="elrepo-kernel" list available
 
 # 创建定时任务
 cat <<'EOF'> /var/spool/cron/root

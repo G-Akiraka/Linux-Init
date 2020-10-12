@@ -7,7 +7,7 @@ wget  http://mirrors.aliyun.com/repo/Centos-7.repo && mv Centos-7.repo CentOS-Ba
 yum clean all && yum makecache && yum update -y
 
 # 安装常用工具
-yum install -y vim ntpdate bash-completion net-tools git yum-versionlock nmap nfs-utils telnet unzip wget
+yum install -y vim ntpdate bash-completion net-tools git yum-versionlock nmap nfs-utils telnet unzip wget epel-release
 
 # 关闭防火墙
 systemctl stop firewalld && systemctl disable firewalld

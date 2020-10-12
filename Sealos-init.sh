@@ -15,6 +15,7 @@ systemctl stop firewalld && systemctl disable firewalld
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install -y kernel-ml
+grub2-set-default 0
 # 查看可升级内核命令
 # yum --disablerepo="*" --enablerepo="elrepo-kernel" list available
 # 查看系统有哪些内核

@@ -14,8 +14,7 @@ systemctl stop firewalld && systemctl disable firewalld
 # 升级内核 kernel-lt:长期支持版本 kernel-ml:稳定主线版本
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
-yum --enablerepo=elrepo-kernel install -y kernel-lt
-yum --enablerepo=elrepo-kernel install kernel-ml
+yum --enablerepo=elrepo-kernel install -y kernel-ml
 # 查看可升级内核命令
 # yum --disablerepo="*" --enablerepo="elrepo-kernel" list available
 

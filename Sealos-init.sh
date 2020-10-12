@@ -1,4 +1,5 @@
 # 替换 yum 为阿里源
+yum install wget -y
 cd  /etc/yum.repos.d/
 mv  CentOS-Base.repo CentOS-Base.repo.bak && mv epel.repo epel.repo.bak
 wget  http://mirrors.aliyun.com/repo/epel-7.repo && mv epel-7.repo epel.repo

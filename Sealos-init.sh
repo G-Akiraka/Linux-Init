@@ -4,7 +4,7 @@ cd  /etc/yum.repos.d/
 mv  CentOS-Base.repo CentOS-Base.repo.bak && mv epel.repo epel.repo.bak
 wget  http://mirrors.aliyun.com/repo/epel-7.repo && mv epel-7.repo epel.repo
 #wget  http://mirrors.aliyun.com/repo/Centos-7.repo && mv Centos-7.repo CentOS-Base.repo
-wget http://mirrors.163.com/.help/CentOS7-Base-163.repo && mv Centos-7.repo CentOS-Base.repo
+wget http://mirrors.163.com/.help/CentOS7-Base-163.repo && mv CentOS7-Base-163.repo CentOS-Base.repo
 yum clean all && yum makecache && yum update -y
 
 # 安装常用工具

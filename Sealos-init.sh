@@ -36,7 +36,7 @@ cat <<'EOF'> /var/spool/cron/root
 * * * * 1 /usr/bin/docker image prune -a --force --filter "until=240h" 2>&1
 
 # 每天1点同步一次时间
-0 1 * * * /usr/sbin/ntpdate pool.ntp.org > /dev/null 2>&1
+0 1 * * * /usr/sbin/ntpdate ntp.aliyun.com > /dev/null 2>&1
 EOF
 
 # 命令补全

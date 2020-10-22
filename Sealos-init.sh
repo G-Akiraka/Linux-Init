@@ -8,7 +8,7 @@ wget http://mirrors.163.com/.help/CentOS7-Base-163.repo && mv CentOS7-Base-163.r
 yum clean all && yum makecache && yum update -y
 
 # 安装常用工具
-yum install -y vim ntpdate bash-completion net-tools git yum-versionlock nmap nfs-utils telnet unzip wget epel-release
+yum install -y vim ntpdate bash-completion net-tools git yum-versionlock nmap nfs-utils telnet unzip wget epel-release bind-utils
 
 # 关闭防火墙
 systemctl stop firewalld && systemctl disable firewalld

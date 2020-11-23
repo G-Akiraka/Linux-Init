@@ -16,5 +16,4 @@ cat > /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": ["https://pgwp6fr3.mirror.aliyuncs.com"]
 }
-EOF
 systemctl daemon-reload && systemctl restart docker

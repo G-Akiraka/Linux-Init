@@ -2,7 +2,7 @@
 echo -e "\033[31m ####################### 安装 Docker 服务 ####################### \033[0m"  
 yum install -y yum-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-yum -y install docker-ce-19.03.13-3.el7
+yum install -y docker-ce-19.03.13-3.el7
 systemctl daemon-reload && systemctl restart docker && systemctl enable docker
 
 # install docker-compose

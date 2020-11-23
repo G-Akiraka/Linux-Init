@@ -13,5 +13,5 @@
 ```
 ####    部署Centos Docker与Docker Compose
 ```bash
-/bin/bash -c "$(https://gitee.com/G-Akiraka/Linux-Init/raw/master/install-docker.sh)"
+/bin/bash -c "$(curl -fsSL https://gitee.com/G-Akiraka/Linux-Init/raw/master/install-docker.sh)"
 ```

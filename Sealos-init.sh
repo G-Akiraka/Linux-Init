@@ -54,7 +54,7 @@ DefaultLimitNPROC=65535
 EOF
 
 # 修改 SSH 端口
-sed -i "s@#Port 22@Port 1798@g" /etc/ssh/sshd_config
+#sed -i "s@#Port 22@Port 1798@g" /etc/ssh/sshd_config
 
 # 添加描述
 cat <<'EOF'> /etc/motd
